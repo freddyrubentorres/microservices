@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "135042b8-13f8-4382-9ae0-ddaf70cb373b",
+		"name": "CLIENT_PERSON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5012434"
+	},
+	"item": [
+		{
+			"name": "getPing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{clients}}{{ping}}",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{clients}}{{ping}}"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllClients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{clients}}",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{clients}}"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postClients",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\":\"Freddy\",\r\n   \"last_name\":\"Torres\",\r\n   \"gender\":\"M\",\r\n   \"age\":42,\r\n   \"identification\":\"1817374639\",\r\n   \"address\":\"Av. Occidental\",\r\n   \"phone\":\"0973648835\",\r\n   \"email\":\"freddytorres@gmail.com\",\r\n   \"password\":\"P@ssword\",\r\n   \"status\":\"TRUE\",\r\n   \"accountType\":\"AHORRO\",\r\n   \"initialBalance\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{clients}}",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{clients}}"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClientByIdentification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{identification}}/2",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{identification}}",
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateClient",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"name\":\"RUBEN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{clients}}/4",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{clients}}",
+					"path": [
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteClients",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{clients}}/4",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{clients}}",
+					"path": [
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
