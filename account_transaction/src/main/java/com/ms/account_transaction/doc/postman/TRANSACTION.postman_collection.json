@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "b7febe6e-f4e9-4aac-b839-30f99524e25d",
+		"name": "TRANSACTION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5012434"
+	},
+	"item": [
+		{
+			"name": "getPing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{transactions}}{{ping}}",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{transactions}}{{ping}}"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postTransaccion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\":\"RETIRO\",\r\n    \"amount\":-540,\r\n    \"account\":{\r\n        \"accountId\":4\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{transactions}}",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{transactions}}"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTransactionsByAccount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{transactions}}{{transactions_account}}/1",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{transactions}}{{transactions_account}}",
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTransactionsByClientId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{transactions}}{{transaction_client}}/1",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{transactions}}{{transaction_client}}",
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

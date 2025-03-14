@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "6411754e-a742-40f0-8f8b-95553020a3a4",
+		"name": "REPORT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5012434"
+	},
+	"item": [
+		{
+			"name": "getPing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{reports}}{{ping}}",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{reports}}{{ping}}"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{scheme}}://{{host}}:{{port}}{{reports}}?startDate=2025-03-13&endDate=2025-03-14&identification=1738579354",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}{{reports}}",
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2025-03-13"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-03-14"
+						},
+						{
+							"key": "identification",
+							"value": "1738579354"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
